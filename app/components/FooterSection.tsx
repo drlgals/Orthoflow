@@ -1,11 +1,15 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
+import { useCookieConsent } from "./CookieBanner";
 
 const WA_LINK = "https://wa.me/552421091671";
 
 export default function FooterSection() {
+  const { reset } = useCookieConsent();
+
   return (
     <footer className="bg-[#383d41] text-white">
       {/* CTA final */}
@@ -113,7 +117,17 @@ export default function FooterSection() {
       <div className="border-t border-white/10 py-5 px-6 md:px-12">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3 text-white/40 text-xs">
           <p>© {new Date().getFullYear()} Orthoflow. Todos os direitos reservados.</p>
-          <p>Viva a Liberdade De Sorrir.</p>
+          <div className="flex items-center gap-4">
+            <Link href="/politica-de-cookies" className="hover:text-white/70 transition-colors">
+              Política de Cookies
+            </Link>
+            <button
+              onClick={reset}
+              className="hover:text-white/70 transition-colors"
+            >
+              🍪 Gerenciar Cookies
+            </button>
+          </div>
         </div>
       </div>
     </footer>
