@@ -22,7 +22,7 @@ export default function HeroSection() {
       {/* Navbar */}
       <nav className="relative z-10 flex items-center justify-between px-6 py-5 md:px-12">
         <Image
-          src="/Orthoflow - Completa Horizontal.png"
+          src="/Orthoflow - MonoPRETOHorizontal.png"
           alt="Orthoflow"
           width={180}
           height={50}
