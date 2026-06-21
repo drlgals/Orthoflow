@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const WA_LINK = "https://wa.me/5524999999999"; // TODO: substituir pelo número real da clínica
+const WA_LINK = "https://wa.me/552421091671";
 
 export default function HeroSection() {
   return (

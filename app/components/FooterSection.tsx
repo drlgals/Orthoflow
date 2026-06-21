@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const WA_LINK = "https://wa.me/5524999999999"; // TODO: substituir pelo número real da clínica
+const WA_LINK = "https://wa.me/552421091671";
 
 export default function FooterSection() {
   return (
@@ -64,29 +64,25 @@ export default function FooterSection() {
             <div className="flex flex-col gap-5 text-white/80 text-sm">
               <div>
                 <p className="text-white font-semibold mb-1">📍 Endereço</p>
-                {/* TODO: substituir pelo endereço completo da clínica */}
-                <p>[ENDEREÇO COMPLETO]</p>
-                <p>Resende – RJ</p>
+                <p>Av. Rita Maria Ferreira da Rocha, 893</p>
+                <p>Nova Liberdade · Resende – RJ</p>
               </div>
 
               <div>
                 <p className="text-white font-semibold mb-1">📞 Contato</p>
-                <a href={WA_LINK} className="hover:text-[#5bd3f3] transition-colors">
-                  {/* TODO: substituir pelo número real */}
-                  (24) 9XXXX-XXXX · WhatsApp
+                <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="hover:text-[#5bd3f3] transition-colors">
+                  (24) 2109-1671 · WhatsApp
                 </a>
               </div>
 
               <div>
                 <p className="text-white font-semibold mb-1">🕐 Horário de Funcionamento</p>
-                {/* TODO: substituir pelos horários reais */}
-                <p>[HORÁRIO DE FUNCIONAMENTO]</p>
+                <p>Segunda a Sexta: 09h às 12h · 14h às 18h30</p>
               </div>
 
               <div className="pt-4 border-t border-white/10 text-white/50 text-xs leading-relaxed">
-                {/* TODO: substituir pelo CRO e CNPJ reais */}
-                <p>Responsável Técnico: Dr. Ricardo [SOBRENOME] · CRO-RJ [NÚMERO]</p>
-                <p className="mt-1">CNPJ: [XX.XXX.XXX/XXXX-XX]</p>
+                <p>Responsável Técnico: Dr. Luís Gustavo Amorim · CRO-RJ 44731</p>
+                <p className="mt-1">CNPJ: 20.507.121/0001-31</p>
               </div>
             </div>
           </motion.div>

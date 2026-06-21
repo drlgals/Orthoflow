@@ -113,7 +113,7 @@ export default function FAQSection() {
             Fale com a gente no WhatsApp agora mesmo. Respondemos rápido!
           </p>
           <a
-            href="https://wa.me/5524999999999" // TODO: substituir pelo número real
+            href="https://wa.me/552421091671"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-[#383d41] text-white font-bold px-7 py-3.5 rounded-full hover:opacity-90 transition-opacity text-sm"
