@@ -11,7 +11,7 @@ export default function HeroSection() {
       {/* Imagem de fundo */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('https://placehold.co/1440x900/d4f5f8/383d41?text=Foto+Paciente+Sorrindo')" }}
+        style={{ backgroundImage: "url('/caroline-lm-uqveD8dYPUM-unsplash.jpg')" }}
       />
       {/* Overlay gradiente da marca */}
       <div
