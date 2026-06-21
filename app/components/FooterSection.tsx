@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 const WA_LINK = "https://wa.me/5524999999999"; // TODO: substituir pelo número real da clínica
@@ -51,9 +52,14 @@ export default function FooterSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-2xl font-bold mb-6">
-              Ortho<span className="text-[#5bd3f3]">flow</span>
-            </p>
+            <Image
+              src="/Orthoflow - MonoBRANCOHorizontal.png"
+              alt="Orthoflow"
+              width={180}
+              height={50}
+              style={{ height: "44px", width: "auto" }}
+              className="mb-6"
+            />
 
             <div className="flex flex-col gap-5 text-white/80 text-sm">
               <div>

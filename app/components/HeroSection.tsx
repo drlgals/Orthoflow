@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 const WA_LINK = "https://wa.me/5524999999999"; // TODO: substituir pelo número real da clínica
@@ -20,9 +21,14 @@ export default function HeroSection() {
 
       {/* Navbar */}
       <nav className="relative z-10 flex items-center justify-between px-6 py-5 md:px-12">
-        <span className="text-2xl font-bold text-[#383d41] tracking-tight">
-          Ortho<span className="text-white">flow</span>
-        </span>
+        <Image
+          src="/Orthoflow - Completa Horizontal.png"
+          alt="Orthoflow"
+          width={180}
+          height={50}
+          style={{ height: "44px", width: "auto" }}
+          priority
+        />
         <a
           href={WA_LINK}
           target="_blank"
