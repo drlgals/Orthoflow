@@ -89,7 +89,7 @@ export default function CookieBanner() {
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: 20 }}
                 transition={{ duration: 0.25 }}
-                className="fixed inset-x-4 top-1/2 -translate-y-1/2 md:inset-auto md:left-1/2 md:-translate-x-1/2 md:w-full md:max-w-lg z-50 bg-white rounded-3xl shadow-2xl p-7"
+                className="fixed left-4 right-4 top-1/2 -translate-y-1/2 md:left-1/2 md:right-auto md:-translate-x-1/2 md:w-full md:max-w-lg z-50 bg-white rounded-3xl shadow-2xl p-7"
               >
                 <h3 className="text-lg font-bold text-[#383d41] mb-1">Gerenciar Preferências</h3>
                 <p className="text-gray-500 text-xs mb-6">
