@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import CookieBanner from "./components/CookieBanner";
+import GoogleTagManager from "./components/GoogleTagManager";
+// import MetaPixel from "./components/MetaPixel";
+import VercelTracking from "./components/VercelTracking";
 
 const roboto = Roboto({
   weight: ["400", "500", "700"],
@@ -27,12 +28,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={`${roboto.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col">
+    <html lang="pt-BR" className={`${roboto.variable} h-full antialiased`} suppressHydrationWarning>
+      <body className="min-h-full flex flex-col" suppressHydrationWarning>
+        <GoogleTagManager />
+        {/* <MetaPixel /> */}
         {children}
         <CookieBanner />
-        <Analytics />
-        <SpeedInsights />
+        <VercelTracking />
       </body>
     </html>
   );

@@ -3,32 +3,18 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
-
-type ConsentState = {
-  analytics: boolean;
-  marketing: boolean;
-};
-
-const STORAGE_KEY = "orthoflow_cookie_consent";
-
-function loadConsent(): ConsentState | null {
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    return raw ? JSON.parse(raw) : null;
-  } catch {
-    return null;
-  }
-}
-
-function saveConsent(consent: ConsentState) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(consent));
-  window.dispatchEvent(new Event("cookieConsentUpdated"));
-}
+import {
+  COOKIE_CONSENT_RESET_EVENT,
+  COOKIE_CONSENT_STORAGE_KEY,
+  type ConsentState,
+  loadConsent,
+  saveConsent,
+} from "@/lib/cookie-consent";
 
 export function useCookieConsent() {
   const reset = () => {
-    localStorage.removeItem(STORAGE_KEY);
-    window.dispatchEvent(new Event("cookieConsentReset"));
+    localStorage.removeItem(COOKIE_CONSENT_STORAGE_KEY);
+    window.dispatchEvent(new Event(COOKIE_CONSENT_RESET_EVENT));
   };
   return { reset };
 }
