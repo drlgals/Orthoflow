@@ -29,10 +29,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={`${roboto.variable} h-full antialiased`} suppressHydrationWarning>
-      <head>
-        <GoogleAnalytics />
-      </head>
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
+        <GoogleAnalytics />
         {/* <MetaPixel /> */}
         {children}
         <CookieBanner />
