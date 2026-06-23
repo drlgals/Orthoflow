@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import CookieBanner from "./components/CookieBanner";
-import GoogleTagManager from "./components/GoogleTagManager";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 // import MetaPixel from "./components/MetaPixel";
 import VercelTracking from "./components/VercelTracking";
 
@@ -29,8 +29,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={`${roboto.variable} h-full antialiased`} suppressHydrationWarning>
+      <head>
+        <GoogleAnalytics />
+      </head>
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
-        <GoogleTagManager />
         {/* <MetaPixel /> */}
         {children}
         <CookieBanner />
