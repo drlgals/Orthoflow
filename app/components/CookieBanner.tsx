@@ -20,16 +20,14 @@ export function useCookieConsent() {
 }
 
 export default function CookieBanner() {
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(() => loadConsent() === null);
   const [showPreferences, setShowPreferences] = useState(false);
   const [prefs, setPrefs] = useState<ConsentState>({ analytics: true, marketing: true });
 
   useEffect(() => {
-    if (!loadConsent()) setVisible(true);
-
     const onReset = () => setVisible(true);
-    window.addEventListener("cookieConsentReset", onReset);
-    return () => window.removeEventListener("cookieConsentReset", onReset);
+    window.addEventListener(COOKIE_CONSENT_RESET_EVENT, onReset);
+    return () => window.removeEventListener(COOKIE_CONSENT_RESET_EVENT, onReset);
   }, []);
 
   function acceptAll() {

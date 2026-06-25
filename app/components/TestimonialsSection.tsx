@@ -75,7 +75,9 @@ export default function TestimonialsSection() {
                   <span key={j} className="text-yellow-400 text-lg">★</span>
                 ))}
               </div>
-              <p className="text-gray-600 text-sm leading-relaxed italic">"{t.text}"</p>
+              <p className="text-gray-600 text-sm leading-relaxed italic">
+                &ldquo;{t.text}&rdquo;
+              </p>
               <div className="flex items-center gap-3 mt-auto pt-4 border-t border-gray-100">
                 <div
                   className="w-10 h-10 rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0"

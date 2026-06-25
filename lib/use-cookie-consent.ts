@@ -14,7 +14,7 @@ function useConsentFlag(check: () => boolean) {
     const sync = () => setEnabled(check());
     sync();
     return onConsentChange(sync);
-  }, []);
+  }, [check]);
 
   return enabled;
 }

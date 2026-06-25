@@ -16,10 +16,6 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: "OrthoFlow",
   description: "Viva a Liberdade De Sorrir",
-  icons: {
-    icon: "/Símbolo Mono@2x.png",
-    apple: "/Símbolo Mono@2x.png",
-  },
 };
 
 export default function RootLayout({
