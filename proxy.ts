@@ -4,7 +4,7 @@ const ROOT_DOMAIN = process.env.ORTHOFLOW_ROOT_DOMAIN ?? "orthoflowresende.com.b
 
 const SUBDOMAIN_ROUTES = {
   clareamento: "/clareamento",
-  implantes: "/implantes",
+  implante: "/implante",
   ortodontia: "/ortodontia",
   protese: "/protese",
 } as const;

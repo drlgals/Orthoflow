@@ -16,7 +16,7 @@ export type SpecialtyContent = {
   faqs: SpecialtyFaq[];
   heroHighlights: string[];
   process: SpecialtySectionCard[];
-  slug: "clareamento" | "implantes" | "ortodontia" | "protese";
+  slug: "clareamento" | "implante" | "ortodontia" | "protese";
   subtitle: string;
   title: string;
   trustPoints: SpecialtySectionCard[];
@@ -111,8 +111,8 @@ export const specialtyContent: Record<SpecialtyContent["slug"], SpecialtyContent
       },
     ],
   },
-  implantes: {
-    slug: "implantes",
+  implante: {
+    slug: "implante",
     eyebrow: "Implantes Dentarios em Resende",
     title: "Substitua dentes perdidos com estabilidade, conforto e previsibilidade.",
     subtitle:
