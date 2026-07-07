@@ -101,7 +101,7 @@ export default function CookieBanner() {
                     <div>
                       <p className="font-semibold text-[#383d41] text-sm">Cookies de Desempenho</p>
                       <p className="text-gray-400 text-xs mt-0.5">
-                        Vercel Analytics e Google Analytics — coleta dados agregados de tráfego e performance.
+                        Vercel Analytics e Google Tag Manager — coleta dados agregados de tráfego e performance.
                       </p>
                     </div>
                     <Toggle
@@ -158,7 +158,7 @@ export default function CookieBanner() {
                 <div>
                   <p className="font-bold text-[#383d41] text-base mb-1">Aviso de Cookies e Privacidade</p>
                   <p className="text-gray-500 text-xs leading-relaxed">
-                    Utilizamos cookies e tecnologias de rastreamento (Vercel Analytics, Google Analytics e Meta Pixel)
+                    Utilizamos cookies e tecnologias de rastreamento (Vercel Analytics, Google Tag Manager e Meta Pixel)
                     para melhorar a experiência e oferecer campanhas relevantes.{" "}
                     <Link href="/politica-de-cookies" className="text-[#5bd3f3] underline hover:text-[#383d41] transition-colors">
                       Política de Cookies
