@@ -17,6 +17,8 @@ export default function SpecialtyLandingPage({
   content,
 }: SpecialtyLandingPageProps) {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
+  const whatsappMessage = `Olá, gostaria de tirar duvidas sobre ${content.whatsappSubject}!`;
+  const whatsappLink = `${WA_LINK}?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
     <main className="overflow-x-hidden bg-white">
@@ -48,7 +50,7 @@ export default function SpecialtyLandingPage({
                 Site principal
               </a>
               <a
-                href={WA_LINK}
+                href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-[#383d41] px-5 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
@@ -104,7 +106,7 @@ export default function SpecialtyLandingPage({
                   className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center"
                 >
                   <a
-                    href={WA_LINK}
+                    href={whatsappLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center rounded-full bg-[#383d41] px-8 py-4 text-base font-bold text-white shadow-lg transition-all hover:opacity-90 active:scale-[0.99]"
@@ -311,7 +313,7 @@ export default function SpecialtyLandingPage({
         </div>
       </section>
 
-      <FooterSection />
+      <FooterSection whatsappLink={whatsappLink} />
     </main>
   );
 }

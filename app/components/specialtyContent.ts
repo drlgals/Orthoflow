@@ -20,6 +20,7 @@ export type SpecialtyContent = {
   subtitle: string;
   title: string;
   trustPoints: SpecialtySectionCard[];
+  whatsappSubject: string;
 };
 
 export const specialtyContent: Record<SpecialtyContent["slug"], SpecialtyContent> = {
@@ -32,6 +33,7 @@ export const specialtyContent: Record<SpecialtyContent["slug"], SpecialtyContent
     description:
       "O clareamento nao precisa deixar o sorriso artificial. A proposta e buscar um resultado limpo, harmonioso e compativel com sua estrutura dentaria, com orientacoes claras sobre expectativa e manutencao.",
     ctaLabel: "Quero avaliar meu clareamento",
+    whatsappSubject: "clareamento",
     heroHighlights: [
       "Avaliacao da tonalidade e sensibilidade",
       "Planejamento proporcional ao seu sorriso",
@@ -120,6 +122,7 @@ export const specialtyContent: Record<SpecialtyContent["slug"], SpecialtyContent
     description:
       "Os implantes funcionam como novas raizes para sustentar dentes fixos com aparencia natural. A avaliacao define o tipo de reabilitacao ideal para o seu caso, do implante unitario ao protocolo.",
     ctaLabel: "Quero avaliar meu caso de implantes",
+    whatsappSubject: "implantes",
     heroHighlights: [
       "Avaliacao individualizada",
       "Planejamento digital",
@@ -208,6 +211,7 @@ export const specialtyContent: Record<SpecialtyContent["slug"], SpecialtyContent
     description:
       "A avaliacao identifica necessidades funcionais e esteticas para indicar o tratamento ortodontico mais adequado. O objetivo e corrigir o alinhamento com planejamento individualizado e acompanhamento consistente.",
     ctaLabel: "Quero avaliar meu caso de ortodontia",
+    whatsappSubject: "ortodontia",
     heroHighlights: [
       "Analise da mordida e do alinhamento",
       "Planejamento individualizado",
@@ -296,6 +300,7 @@ export const specialtyContent: Record<SpecialtyContent["slug"], SpecialtyContent
     description:
       "A Orthoflow avalia seu caso para indicar a melhor reabilitacao, seja protese fixa, protocolo ou removivel. O foco e encontrar uma solucao que respeite sua rotina, seu conforto e seu objetivo.",
     ctaLabel: "Quero avaliar minha protese",
+    whatsappSubject: "próteses",
     heroHighlights: [
       "Opcoes fixas e removiveis",
       "Planejamento individualizado",

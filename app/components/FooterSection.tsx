@@ -7,7 +7,13 @@ import { useCookieConsent } from "./CookieBanner";
 
 const WA_LINK = "https://wa.me/552421091671";
 
-export default function FooterSection() {
+type FooterSectionProps = {
+  whatsappLink?: string;
+};
+
+export default function FooterSection({
+  whatsappLink = WA_LINK,
+}: FooterSectionProps) {
   const { reset } = useCookieConsent();
 
   return (
@@ -32,7 +38,7 @@ export default function FooterSection() {
             tratamento para o seu caso.
           </p>
           <a
-            href={WA_LINK}
+            href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-[#383d41] text-white font-bold text-lg px-10 py-5 rounded-full shadow-xl hover:opacity-90 active:scale-95 transition-all"
@@ -74,7 +80,7 @@ export default function FooterSection() {
 
               <div>
                 <p className="text-white font-semibold mb-1">📞 Contato</p>
-                <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="hover:text-[#5bd3f3] transition-colors">
+                <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="hover:text-[#5bd3f3] transition-colors">
                   (24) 2109-1671 · WhatsApp
                 </a>
               </div>
