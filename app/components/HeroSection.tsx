@@ -33,9 +33,11 @@ export default function HeroSection() {
           href={WA_LINK}
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden md:inline-flex items-center gap-2 bg-[#383d41] text-white text-sm font-semibold px-5 py-2.5 rounded-full hover:opacity-90 transition-opacity"
+          aria-label="Agendar avaliação pelo WhatsApp"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#383d41] text-white shadow-sm transition-all hover:opacity-90 active:scale-95 md:h-auto md:w-auto md:gap-2 md:px-5 md:py-2.5 md:text-sm md:font-semibold"
         >
-          Agendar Avaliação
+          <WhatsAppIcon />
+          <span className="hidden md:inline">Agendar Avaliação</span>
         </a>
       </nav>
 
