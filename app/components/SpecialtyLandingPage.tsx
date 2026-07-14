@@ -62,12 +62,12 @@ export default function SpecialtyLandingPage({
 
           <div className="px-6 pb-16 pt-10 md:px-12 md:pb-24 md:pt-14">
             <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-[minmax(0,1.15fr)_minmax(320px,0.85fr)] md:items-end">
-              <div className="max-w-2xl">
+              <div className="flex max-w-2xl flex-col">
                 <motion.p
                   initial={{ opacity: 0, y: 18 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.45 }}
-                  className="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-[#383d41]/75"
+                  className="order-1 mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-[#383d41]/75"
                 >
                   {content.eyebrow}
                 </motion.p>
@@ -76,7 +76,7 @@ export default function SpecialtyLandingPage({
                   initial={{ opacity: 0, y: 28 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.55, delay: 0.05 }}
-                  className="text-4xl font-bold leading-tight text-[#383d41] md:text-6xl"
+                  className="order-2 text-4xl font-bold leading-tight text-[#383d41] md:text-6xl"
                 >
                   {content.title}
                 </motion.h1>
@@ -85,7 +85,7 @@ export default function SpecialtyLandingPage({
                   initial={{ opacity: 0, y: 28 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.55, delay: 0.12 }}
-                  className="mt-6 max-w-xl text-lg leading-relaxed text-[#383d41]/85"
+                  className="order-4 mt-6 max-w-xl text-lg leading-relaxed text-[#383d41]/85 md:order-3"
                 >
                   {content.subtitle}
                 </motion.p>
@@ -94,7 +94,7 @@ export default function SpecialtyLandingPage({
                   initial={{ opacity: 0, y: 28 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.55, delay: 0.18 }}
-                  className="mt-4 max-w-xl text-base leading-relaxed text-[#383d41]/70"
+                  className="order-5 mt-4 max-w-xl text-base leading-relaxed text-[#383d41]/70 md:order-4"
                 >
                   {content.description}
                 </motion.p>
@@ -103,7 +103,7 @@ export default function SpecialtyLandingPage({
                   initial={{ opacity: 0, y: 22 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.45, delay: 0.25 }}
-                  className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center"
+                  className="order-3 mt-8 flex flex-col gap-4 sm:flex-row sm:items-center md:order-5"
                 >
                   <a
                     href={whatsappLink}

@@ -151,15 +151,20 @@ export default function CookieBanner() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 40 }}
               transition={{ duration: 0.35, ease: "easeOut" }}
-              className="fixed bottom-4 left-4 right-4 md:left-auto md:right-6 md:bottom-6 md:max-w-md z-50 bg-white rounded-3xl shadow-2xl p-6"
+              className="fixed bottom-2 left-2 right-2 z-50 rounded-2xl bg-white p-4 shadow-2xl md:bottom-6 md:left-auto md:right-6 md:max-w-md md:rounded-3xl md:p-6"
             >
-              <div className="flex items-start gap-3 mb-4">
-                <span className="text-2xl">🍪</span>
+              <div className="mb-3 flex items-start gap-2 md:mb-4 md:gap-3">
+                <span className="hidden text-2xl md:inline">🍪</span>
                 <div>
-                  <p className="font-bold text-[#383d41] text-base mb-1">Aviso de Cookies e Privacidade</p>
+                  <p className="mb-1 text-sm font-bold text-[#383d41] md:text-base">Aviso de Cookies e Privacidade</p>
                   <p className="text-gray-500 text-xs leading-relaxed">
-                    Utilizamos cookies e tecnologias de rastreamento (Vercel Analytics, Google Tag Manager e Meta Pixel)
-                    para melhorar a experiência e oferecer campanhas relevantes.{" "}
+                    <span className="md:hidden">
+                      Usamos cookies para melhorar sua experiência.{" "}
+                    </span>
+                    <span className="hidden md:inline">
+                      Utilizamos cookies e tecnologias de rastreamento (Vercel Analytics, Google Tag Manager e Meta Pixel)
+                      para melhorar a experiência e oferecer campanhas relevantes.{" "}
+                    </span>
                     <Link href="/politica-de-cookies" className="text-[#5bd3f3] underline hover:text-[#383d41] transition-colors">
                       Política de Cookies
                     </Link>
@@ -168,27 +173,28 @@ export default function CookieBanner() {
                 </div>
               </div>
 
-              <div className="flex flex-col gap-2">
+              <div className="grid grid-cols-3 gap-2 md:grid-cols-2">
                 <button
                   onClick={acceptAll}
-                  className="w-full bg-[#383d41] text-white font-semibold text-sm py-3 rounded-full hover:opacity-90 transition-opacity"
+                  className="rounded-full bg-[#383d41] py-2.5 text-[11px] font-semibold text-white transition-opacity hover:opacity-90 md:col-span-2 md:py-3 md:text-sm"
                 >
-                  Aceitar todos
+                  <span className="md:hidden">Aceitar</span>
+                  <span className="hidden md:inline">Aceitar todos</span>
                 </button>
-                <div className="flex gap-2">
-                  <button
-                    onClick={() => setShowPreferences(true)}
-                    className="flex-1 border border-gray-200 text-[#383d41] font-medium text-xs py-2.5 rounded-full hover:bg-gray-50 transition-colors"
-                  >
-                    Gerenciar preferências
-                  </button>
-                  <button
-                    onClick={rejectNonEssential}
-                    className="flex-1 border border-gray-200 text-gray-400 font-medium text-xs py-2.5 rounded-full hover:bg-gray-50 transition-colors"
-                  >
-                    Recusar não essenciais
-                  </button>
-                </div>
+                <button
+                  onClick={() => setShowPreferences(true)}
+                  className="rounded-full border border-gray-200 py-2.5 text-[11px] font-medium text-[#383d41] transition-colors hover:bg-gray-50 md:text-xs"
+                >
+                  <span className="md:hidden">Gerenciar</span>
+                  <span className="hidden md:inline">Gerenciar preferências</span>
+                </button>
+                <button
+                  onClick={rejectNonEssential}
+                  className="rounded-full border border-gray-200 py-2.5 text-[11px] font-medium text-gray-400 transition-colors hover:bg-gray-50 md:text-xs"
+                >
+                  <span className="md:hidden">Recusar</span>
+                  <span className="hidden md:inline">Recusar não essenciais</span>
+                </button>
               </div>
             </motion.div>
           )}
