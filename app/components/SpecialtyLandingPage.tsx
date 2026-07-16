@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import Image, { getImageProps } from "next/image";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import FooterSection from "./FooterSection";
@@ -23,10 +23,7 @@ export default function SpecialtyLandingPage({
   return (
     <main className="overflow-x-hidden bg-white">
       <section className="relative min-h-[88vh] overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/caroline-lm-uqveD8dYPUM-unsplash.jpg')" }}
-        />
+        <HeroBackground images={content.heroImages} />
         <div
           className="absolute inset-0"
           style={{ background: "linear-gradient(135deg, rgba(91,211,243,0.9) 0%, rgba(116,243,216,0.82) 55%, rgba(255,255,255,0.7) 100%)" }}
@@ -317,6 +314,60 @@ export default function SpecialtyLandingPage({
 
       <FooterSection whatsappLink={whatsappLink} />
     </main>
+  );
+}
+
+function HeroBackground({
+  images,
+}: {
+  images: SpecialtyContent["heroImages"];
+}) {
+  if (!images) {
+    return (
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('/caroline-lm-uqveD8dYPUM-unsplash.jpg')",
+        }}
+      />
+    );
+  }
+
+  const common = {
+    alt: "",
+    fetchPriority: "high" as const,
+    loading: "eager" as const,
+    sizes: "100vw",
+  };
+  const {
+    props: { srcSet: desktop },
+  } = getImageProps({
+    ...common,
+    src: images.desktop,
+    width: 1672,
+    height: 941,
+    quality: 75,
+  });
+  const {
+    props: { srcSet: mobile, alt, ...mobileProps },
+  } = getImageProps({
+    ...common,
+    src: images.mobile,
+    width: 941,
+    height: 1672,
+    quality: 75,
+  });
+
+  return (
+    <picture>
+      <source media="(min-width: 768px)" srcSet={desktop} />
+      <source media="(max-width: 767px)" srcSet={mobile} />
+      <img
+        {...mobileProps}
+        alt={alt}
+        className="absolute inset-0 h-full w-full object-cover object-center"
+      />
+    </picture>
   );
 }
 

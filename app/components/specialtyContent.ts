@@ -15,6 +15,10 @@ export type SpecialtyContent = {
   eyebrow: string;
   faqs: SpecialtyFaq[];
   heroHighlights: string[];
+  heroImages?: {
+    desktop: string;
+    mobile: string;
+  };
   process: SpecialtySectionCard[];
   slug: "clareamento" | "implante" | "ortodontia" | "protese";
   subtitle: string;
@@ -115,6 +119,10 @@ export const specialtyContent: Record<SpecialtyContent["slug"], SpecialtyContent
   },
   implante: {
     slug: "implante",
+    heroImages: {
+      desktop: "/implante-hero-desktop.png",
+      mobile: "/implante-hero-mobile.png",
+    },
     eyebrow: "Implantes Dentarios em Resende",
     title: "Substitua dentes perdidos com estabilidade, conforto e previsibilidade.",
     subtitle:
